@@ -1,0 +1,173 @@
+*{
+    padding: 0;
+    margin: 0;
+    /* border-style: dashed; */
+    box-sizing: border-box;
+    }
+
+    nav{
+      padding-left:4em;
+      padding-right: 4em;
+      /* TODO: figure out no longer staying fixed */
+      position: center;
+      width: 100%;
+      align-items: center
+      /* left:330px; */
+      /* z-index: 10; */
+    }
+  
+    nav ul {
+      margin:0;
+      padding:0;
+      display:flex;
+      align-items: center;
+      margin-top: -60px;
+    }
+    nav li{
+      padding: 1em 0;
+      list-style-type: none;
+      align-items: center;
+      padding: 20px;
+      font-size: 1.7em;
+    }
+    
+    nav li a {
+      color:rgb(0, 0, 0);
+      font-weight: 600;
+      text-decoration: none;
+      transition: .3s;
+    }
+    
+    nav li a:hover {
+      color:rgb(212, 109, 176);
+      opacity: 1;
+      text-decoration: none;
+      font-family: 'Poiret One', cursive;
+    }
+
+  /* @media screen and (max-width: 600px) {
+  .container {
+      height: 100%;
+      display: grid;
+      grid-gap: 3px;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-template-areas: 
+          "q"
+          "h"
+          "e"
+          "b"
+          "f";
+  }
+   */
+  /* step two - build your grid desktop and tablet grid*/
+  .container {
+      margin-left: 100px;
+      margin-right: 100px;
+      height: 100%;
+      display: grid;
+      grid-gap: 3px;
+      /* this will be  the same for everyone */
+      grid-template-columns: repeat(2, 1fr);
+      /* this will be customized, based on your grid, use pixels or % */
+      grid-template-rows: auto;
+      /* use letters from step 1 to build the grid */
+      grid-template-areas:
+          "a a" 
+          "h h"
+          ". n"
+          "e x"
+          "s x"
+          "c x";
+  }
+  
+  /* step three - build your mobile grid, what becomes active when the pixels are 800px or less */
+  @media screen and (max-width: 800px) {
+  
+      .container{
+          display: grid;
+          grid-gap: 3px;
+          /* grid is only one column, keep this way */
+          grid-template-columns: 1fr;
+          /* you can enter values, or auto will adjust the box sizes based on content */
+          grid-template-rows: auto;
+          grid-template-areas:
+
+          "a"
+          "h"
+          "n"
+          "e"
+          "x"
+          "s"
+          "c";
+      }
+  }
+  
+  /* step 1 - write in each of your sections and assign each of your sections a letter */
+
+.nav {
+  grid-area: a;
+}
+
+ .header {
+      text-align: center;
+      grid-area: h;
+      margin-left: 0px;
+      margin-top: 0px;
+      font-size: 25px;
+      font-family: 'PT Sans', sans-serif;
+  }
+  
+  .education{
+      grid-area: e;
+  }
+  
+  .experience {
+      grid-area: x;
+      /* width: 50%; */
+  }
+  
+  .skills{
+      grid-area: s;
+  }
+
+  .accomplishments{
+      grid-area: c;
+  }
+
+  h1{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: rgb(146, 162, 181);
+    text-align: left;
+  }
+
+  h2{
+    font-family: 'Source Sans Pro', sans-serif;
+    /* padding-top: 50px; */
+    /* padding-bottom: 50px; */
+    color: rgb(146, 162, 181); 
+    text-align: left;
+  }
+
+  h3{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: rgb(146, 162, 181);
+    font-weight: 200;
+     
+  }
+
+  h4{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+  }
+
+  h5{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 50;
+    /* text-size-adjust: 25%; */
+  }
+
+  li{
+    list-style: none;
+  }
+

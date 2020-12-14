@@ -1,0 +1,82 @@
+* {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bolder;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 80%;
+    height: auto;
+}
+
+/* NAVBAR CSS */
+
+
+  .container {
+    /* margin-left: 100px; */
+    /* margin-right: 100px; */
+    height: 100%;
+    display: grid;
+    grid-gap: 3px;
+    /* this will be  the same for everyone */
+    grid-template-columns: repeat(2, 1fr);
+    /* this will be customized, based on your grid, use pixels or % */
+    grid-template-rows: auto;
+    /* use letters from step 1 to build the grid */
+    grid-template-areas:
+        "n n"
+        "t t"
+        "p s"
+        "p s"
+}
+
+/* step three - build your mobile grid, what becomes active when the pixels are 800px or less */
+@media screen and (max-width: 800px) {
+
+    .container{
+        display: grid;
+        grid-gap: 3px;
+        /* grid is only one column, keep this way */
+        grid-template-columns: 1fr;
+        /* you can enter values, or auto will adjust the box sizes based on content */
+        grid-template-rows: auto;
+        grid-template-areas:
+
+        "n"
+        "s"
+        "t"
+        /* "b" */
+        "p";
+    }
+}
+
+nav {
+  grid-area: n;
+  width: 130%;
+}
+
+.slideshowcontainer {
+  grid-area: s;
+}
+
+.title {
+  grid-area: t;
+  padding-left: 2em;
+  /* width: 70%; */
+}
+
+/* .bullets { */
+  /* grid-area: b; */
+/* } */
+
+.paragraph {
+  grid-area: p;
+  padding: 2em;
+  line-height: 1.5rem;
+}
+
+
+
+
+
